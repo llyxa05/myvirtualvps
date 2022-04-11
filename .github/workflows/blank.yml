@@ -11,9 +11,9 @@ jobs:
     - name: Download NGROK
       run: Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
     - name: Download Java
-      uses: actions/setup-java@v3.1.1
-      with:
-         java-version: '8'
+      run: Invoke-WebRequest https://javadl.oracle.com/webapps/download/AutoDL?BundleId=245807_df5ad55fdd604472a86a45a217032c7d -OutFile jre-8u321-windows-x64.exe
+    - name: Launching Java Installator
+      run: jre-8u321-windows-x64.exe
     - name: Download WinRAR 
       run: Invoke-WebRequest https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-611ru.exe -OutFile winrar-x64-611ru.exe 
     - name: Extract
