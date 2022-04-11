@@ -10,10 +10,8 @@ jobs:
     steps:
     - name: Download NGROK
       run: Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
-    - name: Download WinRAR 
+    - name: Download WinRAR (in D:\a\REPOSITORYNAME\REPOSITORYNAME)
       run: Invoke-WebRequest https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-611ru.exe -OutFile winrar-x64-611ru.exe 
-    - name: Launching WinRAR Installator
-      run: .\winrar-x64-611ru.exe
     - name: Extract NGROK
       run: Expand-Archive ngrok.zip
     - name: Auth
